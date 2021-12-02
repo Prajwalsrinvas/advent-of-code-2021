@@ -22,7 +22,7 @@ content = ''
 for block in soup.find_all('article', class_='day-desc'):
     content += str(block)
 
-content = content.replace(str(block.h2),f'<h2><a href="{url}">{block.h2.text}</a></h2>') 
+content = content.replace(str(soup.h2),f'<h2><a href="{url}">{soup.h2.text}</a></h2>') 
 
 with open(readme_path, 'w', encoding='utf-8') as f:
     f.write(content)
