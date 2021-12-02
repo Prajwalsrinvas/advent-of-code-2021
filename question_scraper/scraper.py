@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 
 current_day = datetime.now().day
-current_folder = f'../Day {current_day}'
+current_folder = f'Day {current_day}'
 os.makedirs(current_folder, exist_ok=True)
 readme_path = os.path.join(current_folder, 'README.md')
 
