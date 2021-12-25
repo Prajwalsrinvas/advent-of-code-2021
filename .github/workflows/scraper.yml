@@ -1,8 +1,8 @@
 name: advent-of-code-question-scraper
 
 on:
-  schedule:
-    - cron: "30 6 * * *" # At 06:30 UTC
+  #schedule:
+  #  - cron: "30 6 * * *" # At 06:30 UTC
   workflow_dispatch:
 
 jobs:
