@@ -18,9 +18,9 @@ headers = {
 response = requests.get(url, headers=headers)
 soup = BeautifulSoup(response.content)
 
-content = ''
-for block in soup.find_all('article', class_='day-desc'):
-    content += str(block)
+content = ''.join(
+    str(block) for block in soup.find_all('article', class_='day-desc')
+)
 
 content = content.replace(str(soup.h2),f'<h2><a href="{url}">{soup.h2.text}</a></h2>') 
 
